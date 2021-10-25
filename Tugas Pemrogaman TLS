@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+int main () {
+    string mahasiswa [9000];
+    int z,i,j;
+    cout << " Tugas TLS Pemrograman \n Code Pengurut Absen Berdasarkan Abjad ";
+    cout << " Masukkan Jumlah Mahasiswa UGM Angkatan 2021 (Maksimal 9000 Mahasiswa): ";
+    cin >> z;
+    cout << " Masukkan Nama Mahasiswa UGM Angkatan 2021: \n";
+    for (i=0; i<z; i++){
+        cout << i+1  << ". ";
+        cin >> mahasiswa[i];}
+    sort(mahasiswa, mahasiswa + z);
+    cout << "|| Absen Mahasiswa UGM Angkatan 2021 berdasarkan abjad ||\n";
+    for (j=0; j<z; j++){
+        cout << j+1 << ". " << mahasiswa[j]<< "\n";}
+}
